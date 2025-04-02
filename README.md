@@ -64,14 +64,53 @@ https://github.com/google/googletest
 
 #  Class Details (Highlevel)
   - point_2D - to manage 2D points (integer)
-  - tile_type - to identify each tile in the grid (battlefield)
+    
+      ![image](https://github.com/user-attachments/assets/932d1341-76dd-4769-b63b-dfc589012d42)
+    
   - unit - to represents the unit's position on the battlefield grid
+    
+      ![image](https://github.com/user-attachments/assets/220b614c-78ca-4f2a-acdf-00f3ce2e6b3b)
+    
   - battle_field - to represent a grid of tiles
+    
+      ![image](https://github.com/user-attachments/assets/0dd19db9-2f63-42d4-a61b-dcf71b1c7d6b)
+    
   - battle_field_creator - to create battlefield based on the user input
+    
+      ![image](https://github.com/user-attachments/assets/087a72b4-0af6-4238-aa96-15de92f05dc8)
+    
   - battle_field_renderer - to renderer units position on console using double buffering
-  - move_status - to identify the units movement status
+    
+      ![image](https://github.com/user-attachments/assets/d75c78f7-ed0e-4abe-b930-5735231bacfe)
+          
   - node - to represent the node in the A Start pathfinding graph
+    
+      ![image](https://github.com/user-attachments/assets/f8084e92-b2f2-49db-946e-2aef2726eae1)
+    
   - pathfinder - to find the shortest path between two positions using A Start algorithm
+    
+      ![image](https://github.com/user-attachments/assets/38334788-6703-4aeb-9143-f55061a610b9)
+
+  - tile_type - to identify each tile in the grid (battlefield)
+  - move_status - to identify the units movement status
+
+# Resources
+  - There are total of 5 different types of JSON available as listed below, including one from the assessment in the /resources directory. If you would like to load a different JSON from the default, you would need to change the hard-coded path in battleFieldCreator.cpp
+    
+      	// Load battlefield configuration from a JSON file
+      	**std::string config_file = "../resources/tile_set_woodland_1.json";**
+      	if (!std::filesystem::exists(config_file))
+      		throw std::runtime_error("Resource file not found: " + config_file);
+      	battle_field.load_from_json(config_file);
+      	break;
+    
+      - tile_set_woodland_1.json (default)
+      - tile_set_woodland_2.json
+      - tile_set_woodland_3.json
+      - tile_set_woodland_4.json
+      - tile_set_woodland_5.json
+
+
 
 
 
