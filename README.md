@@ -58,7 +58,7 @@ https://github.com/google/googletest
       - cd build/debug
       - path_finding.exe
    
-    - Run unit tests
+    - Run unit tests (can also be run through Visual Studio Test → Test Explorer)
       - cd build/tests/Debug
       - unit_tests.exe
 
