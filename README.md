@@ -52,9 +52,27 @@ https://github.com/google/googletest
       - cmake -S . -B build
 
   - Compile
-      - cmake --build build --config Debug
-
+      - cmake --build build
+        
   - Run
       - cd build/debug
       - path_finding.exe
+   
+    - Run unit tests
+      - cd build/tests/Debug
+      - unit_tests.exe
+
+#  Class Details (Highlevel)
+  - point_2D - to manage 2D points (integer)
+  - tile_type - to identify each tile in the grid (battlefield)
+  - unit - to represents the unit's position on the battlefield grid
+  - battle_field - to represent a grid of tiles
+  - battle_field_creator - to create battlefield based on the user input
+  - battle_field_renderer - to renderer units position on console using double buffering
+  - move_status - to identify the units movement status
+  - node - to represent the node in the A Start pathfinding graph
+  - pathfinder - to find the shortest path between two positions using A Start algorithm
+
+
+
 
